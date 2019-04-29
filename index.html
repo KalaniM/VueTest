@@ -4,11 +4,19 @@
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
-        
-        <div id="app">
-            {{ message }}
-        </div>
-        
-        <script src="index.js"></script>
-    </body>
+    
+      <div id="root">
+        Sign Up !
+        </br>
+        </br>
+        <input v-model= "email" :class= "[email.length < 2 ? 'red' : 'green']">
+        </br>
+        </br>
+        <buttonon onclick="alert('Signed up')" :disabled="email.length < 2">
+          Submit
+        </buttonon>
+      </div>
+      
+      <script src="index.js"></script>
+  </body>
 </html>
